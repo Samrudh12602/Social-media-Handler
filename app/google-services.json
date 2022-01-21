@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "863161682582",
+    "project_id": "video-downloader-2ab17",
+    "storage_bucket": "video-downloader-2ab17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:863161682582:android:707584a434cdebe77a50b7",
+        "android_client_info": {
+          "package_name": "samrudhdhaimodkar.example.samsvideodownloader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "863161682582-golsmdn09lgsie2vvpjfqdm5ta2gnjf7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "samrudhdhaimodkar.example.samsvideodownloader",
+            "certificate_hash": "7864509c854a263498fa096d7c67b493144237fd"
+          }
+        },
+        {
+          "client_id": "863161682582-uql33ok7s5o5fcq7vjuo77b7qj0t3qmt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKRK1RNZC2v-LUbWhLd7htzsD06HSWl7Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "863161682582-uql33ok7s5o5fcq7vjuo77b7qj0t3qmt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

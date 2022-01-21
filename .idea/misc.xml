@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/drawable/ic_baseline_file_download_24.xml" value="0.27239583333333334" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/drawable/selected_tab.xml" value="0.28229166666666666" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/drawable/story_background.xml" value="0.28229166666666666" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/drawable/tab_rect.xml" value="0.28229166666666666" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/drawable/tab_selector.xml" value="0.28229166666666666" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/drawable/textbox_outline.xml" value="0.46979166666666666" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout-v21/activity_insta_login.xml" value="0.25625" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout-v21/activity_selected_media.xml" value="0.4048913043478261" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout-v21/activity_selected_profile.xml" value="0.4048913043478261" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout-v21/item_posts_layout.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout-v21/profiles_item.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_display_data.xml" value="0.19021739130434784" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_facebook.xml" value="0.24320652173913043" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_full_screen_image.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_full_screen_video.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_insta_login.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_insta_login2.xml" value="0.4048913043478261" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_instagram.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_login.xml" value="0.25677083333333334" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_main.xml" value="0.25833333333333336" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_notification.xml" value="0.42864583333333334" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_post_image.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_settings.xml" value="0.25729166666666664" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/activity_whatsapp.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/fragment_image.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/fragment_search.xml" value="0.25625" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/fragment_u_r_l.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/fragment_video.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/item_instadownload.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/item_stories_layout.xml" value="0.45364583333333336" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/list_item.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/layout/whatsapp_item_layout.xml" value="0.34601449275362317" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/menu/menu_main.xml" value="0.4427083333333333" />
+        <entry key="..\:/PROGRAMMING/SamsVideoDownloader/app/src/main/res/menu/menu_navigation.xml" value="0.4427083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

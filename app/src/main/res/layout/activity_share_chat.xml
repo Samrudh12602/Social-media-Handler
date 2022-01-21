@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#40000000"
+    tools:context=".ShareChatActivity">
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/sharechat_logo"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/sharechat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sharechat_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="ShareChat"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold">
+        </TextView>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rel">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/shareChatURL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Url Here"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/input">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/downloadBtn"
+                android:layout_height="wrap_content"
+                android:text="download"
+                android:layout_marginRight="8dp"
+                android:padding="16dp">
+            </com.google.android.material.button.MaterialButton>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/pasteBtn"
+                android:layout_marginLeft="8dp"
+                android:layout_height="wrap_content"
+                android:text="Paste"
+                android:padding="16dp">
+            </com.google.android.material.button.MaterialButton>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+</layout>
