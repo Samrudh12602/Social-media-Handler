@@ -13,7 +13,6 @@ import samrudhdhaimodkar.example.samsvideodownloader.R;
 
 public class MessageActivity extends AppCompatActivity {
     private Button send;
-    int abc = 45;
     private EditText number,message;
     private String phoneNumber,userMsg;
     @Override

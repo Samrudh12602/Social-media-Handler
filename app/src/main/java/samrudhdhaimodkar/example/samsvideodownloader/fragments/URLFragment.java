@@ -1,7 +1,6 @@
 package samrudhdhaimodkar.example.samsvideodownloader.fragments;
 
 import static android.content.Context.CLIPBOARD_SERVICE;
-import static samrudhdhaimodkar.example.samsvideodownloader.SharePrefs.SESSIONID;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
@@ -25,11 +24,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -41,7 +37,6 @@ import java.net.CookieStore;
 import java.net.HttpCookie;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Objects;
 
 import samrudhdhaimodkar.example.samsvideodownloader.R;
 import samrudhdhaimodkar.example.samsvideodownloader.SharePrefs;
@@ -73,18 +68,18 @@ public class URLFragment extends Fragment {
         binding.whatsappRecycler.setAdapter(adapter);
         requestQueue = Volley.newRequestQueue(requireActivity().getApplicationContext());
 
-        database.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds: snapshot.getChildren()){
-                    if((ds.hasChild(SESSIONID))&&(ds.child(SESSIONID).getValue().equals(SharePrefs.getInstance(getContext()).getSESSIONID())))
-                        counter= (long) Objects.requireNonNull(ds.child("Counter").getValue());
-                    }
-                }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
+//        database.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for(DataSnapshot ds: snapshot.getChildren()){
+//                    if((ds.hasChild(SESSIONID))&&(ds.child(SESSIONID).getValue().equals(SharePrefs.getInstance(getContext()).getSESSIONID())))
+//                        counter= (long) Objects.requireNonNull(ds.child("Counter").getValue());
+//                    }
+//                }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//            }
+//        });
         binding.pasteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -155,9 +150,9 @@ public class URLFragment extends Fragment {
                                     MediaData data1= new MediaData(finalVideoUrl[0],"graphVideo");
                                     media.add(data1);
                                     counter++;
-                                    database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(data1);
-                                    database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Counter").setValue(counter);
-                                    database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(getContext()).getSESSIONID());
+//                                    database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(data1);
+//                                    database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Counter").setValue(counter);
+//                                    database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(getContext()).getSESSIONID());
                                 }
                                 adapter=new LinkAdapter(getContext(),media);
                                 binding.whatsappRecycler.setHasFixedSize(false);
@@ -174,9 +169,9 @@ public class URLFragment extends Fragment {
                                             MediaData data1= new MediaData(finalImageUrl[0],type);
                                             media.add(data1);
                                             counter++;
-                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(data1);
-                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Counter").setValue(counter);
-                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(getContext()).getSESSIONID());
+//                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(data1);
+//                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Counter").setValue(counter);
+//                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(getContext()).getSESSIONID());
                                         }
                                     }
                                     adapter=new LinkAdapter(getContext(),media);
@@ -189,9 +184,9 @@ public class URLFragment extends Fragment {
                                             MediaData data1= new MediaData(finalImageUrl[0],"graphImage");
                                             media.add(data1);
                                             counter++;
-                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(data1);
-                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Counter").setValue(counter);
-                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(getContext()).getSESSIONID());
+//                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(data1);
+//                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child("Counter").setValue(counter);
+//                                            database.child(SharePrefs.getInstance(getContext()).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(getContext()).getSESSIONID());
                                         }
                                         adapter=new LinkAdapter(getContext(),media);
                                         binding.whatsappRecycler.setHasFixedSize(false);

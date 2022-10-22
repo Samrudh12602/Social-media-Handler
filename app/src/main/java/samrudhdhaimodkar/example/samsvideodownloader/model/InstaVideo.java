@@ -1,13 +1,9 @@
 package samrudhdhaimodkar.example.samsvideodownloader.model;
 
-import static samrudhdhaimodkar.example.samsvideodownloader.SharePrefs.SESSIONID;
-
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -15,11 +11,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,7 +23,6 @@ import java.net.CookieManager;
 import java.net.CookieStore;
 import java.net.HttpCookie;
 import java.net.URL;
-import java.util.Objects;
 
 import samrudhdhaimodkar.example.samsvideodownloader.SharePrefs;
 import samrudhdhaimodkar.example.samsvideodownloader.Util;
@@ -43,17 +35,17 @@ public class InstaVideo {
     public static void downloadVideo(Context context, String postUrl) {
         database= FirebaseDatabase.getInstance().getReference("user");
 
-        database.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot ds: snapshot.getChildren()){
-                    if(ds.child(SESSIONID).getValue().equals(SharePrefs.getInstance(context).getSESSIONID()))
-                        counter= ((long) Objects.requireNonNull(ds.child("Counter").getValue()));                }
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
+//        database.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                for(DataSnapshot ds: snapshot.getChildren()){
+//                    if(ds.child(SESSIONID).getValue().equals(SharePrefs.getInstance(context).getSESSIONID()))
+//                        counter= ((long) Objects.requireNonNull(ds.child("Counter").getValue()));                }
+//            }
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//            }
+//        });
         String replacedUrl;
         final String[] finalVideoUrl = new String[1];
 
@@ -112,9 +104,9 @@ public class InstaVideo {
                         Obj1 = response.getJSONObject("graphql");
                         Obj2 = Obj1.getJSONObject("shortcode_media");
                         finalVideoUrl[0] = Obj2.getString("video_url");
-                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
-                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
-                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
+//                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
+//                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
+//                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -127,24 +119,24 @@ public class InstaVideo {
                                 String type=node.getString("__typename");
                                 if(type.equalsIgnoreCase("GraphImage")){
                                     finalVideoUrl[0] = node.getString("display_url");
-                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
-                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
-                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
+//                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
+//                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
+//                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
                                     Util.download(finalVideoUrl[0], Util.RootDirectoryInstagram, context, System.currentTimeMillis() + ".jpg");
                                 }else if(type.equalsIgnoreCase("GraphVideo")) {
                                     finalVideoUrl[0] = node.getString("video_url");
-                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
-                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
-                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
+//                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
+//                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
+//                                    database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
                                     Util.download(finalVideoUrl[0], Util.RootDirectoryInstagram, context, System.currentTimeMillis() + ".mp4");
                                 }
                             }
                         } catch (JSONException jsonException) {
                             try {
                                 finalVideoUrl[0]=Obj2.get("display_url").toString();
-                                database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
-                                database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
-                                database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
+//                                database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalVideoUrl[0]);
+//                                database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
+//                                database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
                                 Util.download(finalVideoUrl[0], Util.RootDirectoryInstagram, context, System.currentTimeMillis() + ".jpg");
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -232,9 +224,9 @@ public class InstaVideo {
                     }
                     try {
                         finalImageUrl[0] = Obj2.getString("display_url");
-                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalImageUrl[0]);
-                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
-                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
+//                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Downloads").child(String.valueOf(counter)).setValue(finalImageUrl[0]);
+//                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child("Counter").setValue(counter);
+//                        database.child(SharePrefs.getInstance(context).getSESSIONID()).child(SESSIONID).setValue(SharePrefs.getInstance(context).getSESSIONID());
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
